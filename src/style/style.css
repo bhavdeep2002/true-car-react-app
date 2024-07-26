@@ -1,0 +1,33 @@
+.navfont{
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.my-botton{
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: darkblue;
+    border-radius: 5px;
+    border: 0px;
+}
+.my-botton:hover{
+    color: white;
+    background-color: darkblue;
+}
+.brand{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue
+}
+.suzuki-logo{
+    position: relative;
+    top: 9px;
+    vertical-align: unset;
+}
+.routingfont{
+    color:white
+}

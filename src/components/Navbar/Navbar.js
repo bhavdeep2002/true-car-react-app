@@ -38,7 +38,7 @@ export default function Navbar (){
             <div className='row'>
                 <div className='col-md-12 brand'>
                     <div>True Car</div>
-                    <div><img className='suzuki-logo' src="/images/suzuki logo.png"></img>MARUTI SUZUKI</div>
+                    <div><img className='suzuki-logo' src="/images/suzuki logo.png" alt='suzuki logo'></img>MARUTI SUZUKI</div>
                 </div>
             </div>
         </div>

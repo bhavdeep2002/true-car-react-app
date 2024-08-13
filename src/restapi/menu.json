@@ -1,0 +1,9 @@
+{
+     "menu": [ 
+        "By City",
+        "By Model",
+        "By Price",
+        "By Fuel Type",
+        "By Body Type"
+    ]
+}

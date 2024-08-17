@@ -31,3 +31,39 @@
 .routingfont{
     color:white
 }
+.mynav-bar{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+}
+.mynav-items{
+    color:white;
+    margin-right: 5vw;
+}
+.search{
+    background-color:white;
+}
+.search:hover{
+    background-color: white;
+    color: black;
+}
+.arrow-right{
+    position:absolute;
+    right: 50px;
+    top:410px;
+    border-style: none;
+}
+.arrow-right:hover{
+    color: white;
+    background-color: darkblue;
+}
+.arrow-left{
+    position:absolute;
+    left: 50px;
+    top:410px;
+    border-style: none;
+}
+.arrow-left:hover{
+    color: white;
+    background-color: darkblue;
+}

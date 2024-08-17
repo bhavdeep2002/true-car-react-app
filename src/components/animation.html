@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    img {
+      width: 50%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+      /* Prevent horizontal scrollbars */
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      width: 300%;
+      /* Updated to account for the duplicate image */
+      position: relative;
+      right: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <img id="recycle" src="./recycle.PNG">
+    <img id="truck" src="./truck.PNG">
+    <img id="duplicate" src="./recycle.PNG"> <!-- Duplicate of the first image -->
+  </div>
+
+  <button onclick="run()">Next</button>
+  <script>
+    const images = document.querySelectorAll("#container img");
+    const imageWidth = images[0].offsetWidth;
+    let shiftwidth = 0
+    let counter = 0;
+
+    const run = () => {
+      container.style.transition = "right 2s"
+      console.log(counter)
+      console.log("done")
+      shiftwidth += imageWidth
+      console.log(shiftwidth)
+      container.style.right = shiftwidth + "px"
+      if (counter === 1) {
+        setTimeout(() => {
+          console.log("settimeout")
+          container.style.transition = "none"
+          container.style.right = "0px"
+          shiftwidth=0
+          counter=0
+        }, 2000);
+      }
+      counter++
+    }
+  </script>
+</body>
+
+</html>

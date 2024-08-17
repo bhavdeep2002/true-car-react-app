@@ -41,7 +41,14 @@ else if(method==='GET' && url==='/ByBodyType'){
   const path ='./By Body Type.json'
   readfile(res,path)
 }
+else if(method==='GET' && url==='/Banner'){
+  const path ='./Bannerimages.json'
+  readfile(res,path)
+}
+else{
+  res.end("page not Found")
+}
 }).listen(8080,()=>{
-  console.log("server has been started on http://localhost:8080")
+  console.log("Server has been started on http://localhost:8080")
 })
 

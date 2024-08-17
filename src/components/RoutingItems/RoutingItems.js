@@ -1,18 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-export default function RoutingItems({ menu,models}) {
-    const [items,setItem] =useState([])
-    useEffect(()=>{
-        const url =menu.split(' ').join('')
+export default function RoutingItems({ menu, models }) {
+    const [items, setItem] = useState([])
+    useEffect(() => {
+        const url = menu.split(' ').join('')
         axios.get(`http://localhost:8080/${url}`)
-        .then((res)=>{
-            setItem(res.data.list)
-        })
-        .catch((e)=>{console.log(e)})
-    },[])
+            .then((res) => {
+                setItem(res.data.list)
+            })
+            .catch((e) => { console.log(e) })
+    }, [])
     return (
-        <li className="nav-item dropdown">
+        <li className="nav-item dropdown mynav-items">
             <a
                 className="nav-link dropdown-toggle"
                 href="#"

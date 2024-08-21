@@ -35,36 +35,15 @@
 </head>
 
 <body>
-  <div id="container">
-    <img id="recycle" src="./recycle.PNG">
-    <img id="truck" src="./truck.PNG">
-    <img id="duplicate" src="./recycle.PNG"> <!-- Duplicate of the first image -->
-  </div>
+  <form id="container">
+    <button type="button" onclick="run(event)">Submit</button>
+  </form>
 
-  <button onclick="run()">Next</button>
   <script>
-    const images = document.querySelectorAll("#container img");
-    const imageWidth = images[0].offsetWidth;
-    let shiftwidth = 0
-    let counter = 0;
-
-    const run = () => {
-      container.style.transition = "right 2s"
-      console.log(counter)
-      console.log("done")
-      shiftwidth += imageWidth
-      console.log(shiftwidth)
-      container.style.right = shiftwidth + "px"
-      if (counter === 1) {
-        setTimeout(() => {
-          console.log("settimeout")
-          container.style.transition = "none"
-          container.style.right = "0px"
-          shiftwidth=0
-          counter=0
-        }, 2000);
-      }
-      counter++
+    function run(e) {
+      e.preventDefault();
+      console.log("run");
+      
     }
   </script>
 </body>

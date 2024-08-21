@@ -81,9 +81,6 @@
 .selectinput{
 width: 25%;
 }
-html,body{
-    overflow-x: hidden;
-}
 .quick-search-navlinks{
     display: flex;
     justify-content: space-around;

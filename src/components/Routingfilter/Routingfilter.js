@@ -8,7 +8,7 @@ export default function Routingfilter() {
   useEffect(()=>{
     axios.get('http://localhost:8080/menu')
     .then((res)=>{
-      console.log(res.data)
+      
       setMenu(res.data.menu)
     })
     .catch((error)=>console.log(error))

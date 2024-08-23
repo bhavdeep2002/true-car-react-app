@@ -1,3 +1,6 @@
+html,body{
+    overflow-x: hidden;
+}
 .navfont{
     font-size: 10px;
     font-weight: bold;
@@ -106,8 +109,29 @@ cursor: pointer;
 .container-category{
     display: flex;
     justify-content: space-around;
+    position: relative;
+    right: 0px;
+    transition: right 2s;
 }
 .list-items{
-    width: 15%;
     border:1px solid black;
+}
+.arrow-rigth{
+    position: absolute;
+    top: 830px;
+    left: 1438px;
+   
+}
+.arrow-left{
+    position: absolute;
+    top: 830px;
+   
+}
+.arrow-left:hover{
+    color: darkblue;
+    cursor: pointer;
+}
+.arrow-rigth:hover{
+    color: darkblue;
+    cursor: pointer;
 }

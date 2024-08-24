@@ -17,7 +17,7 @@ export default function Category({show,url,widthItem,widthContainer}) {
     }, [])
     if(show){
         return (       
-            <div id="container-category" style={{width:widthContainer+"%"}} className='container-category'>
+            <div id="container-category" style={{width:widthContainer+"vw"}} className='container-category'>
                 {list.map((i, index) => {
                     return( 
                     <div style={{width:widthItem+"%",height:"67px"}}  key={index} className='list-items'>

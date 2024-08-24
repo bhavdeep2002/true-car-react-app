@@ -117,10 +117,9 @@ cursor: pointer;
     border:1px solid black;
 }
 .arrow-rigth{
-    position: absolute;
-    top: 830px;
-    left: 1438px;
-   
+    width: 70px;
+    margin-left: 87vw;
+    margin-top: -41px;
 }
 .arrow-left{
     position: absolute;
@@ -135,3 +134,10 @@ cursor: pointer;
     color: darkblue;
     cursor: pointer;
 }
+/* @media only screen and (min-height: 800px) {
+    .arrow-rigth{
+        width: 70px;
+        margin-left: 87vw;
+        margin-top: -40px;
+    }
+  } */

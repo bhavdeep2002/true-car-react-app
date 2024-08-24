@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react"
 import Category from "../Category/Category"
-import { FaAngleRight,FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 export default function QuickSearch() {
 
     const [modeldis, setModelDis] = useState(true);
     const [budgetdis, setBudgetDis] = useState(false);
     const [bodytypedis, setBodyTypeDis] = useState(false);
-    let leftdistance =0;
-    let rightdistance =0;
-
+    let rightdistance = 0;
     function display(e) {
         if (e.target.textContent === "By Model") {
             setModelDis(true);
@@ -25,14 +23,27 @@ export default function QuickSearch() {
         }
 
     }
-    const leftshift =()=>{
-        console.log()
-        leftdistance+=270
-        document.getElementById('container-category').style.right=leftdistance+"px";  
+    const leftshift = () => {
+        console.log("left shift")
+        if (rightdistance < 540) {
+            rightdistance += 270
+            document.getElementById('container-category').style.right = rightdistance + "px";
+        }
+        else {
+            rightdistance = 0;
+            document.getElementById('container-category').style.right = rightdistance + "px";
+        }
+        console.log(rightdistance)
     }
-    const rigthshift =()=>{
-        rightdistance+=270
-        document.getElementById('container-category').style.left=rightdistance+"px";  
+    const rigthshift = () => {
+        if (rightdistance === 0) {
+            rightdistance = 540;
+            document.getElementById('container-category').style.right = rightdistance + "px";
+        }
+        else {
+            rightdistance -= 270
+            document.getElementById('container-category').style.right = rightdistance + "px";
+        }
     }
     return (
         <div className="container">
@@ -49,13 +60,16 @@ export default function QuickSearch() {
                 </div>
             </div>
             <div className="row">
-                <div className='col-md-12' style={{overflowX:"hidden"}}>
-                    {<Category show={modeldis} url="ByModel" widthItem="10" widthContainer="145" />}
+                <div className='col-md-12' style={{ overflowX: "hidden", overflowY: 'hidden' }}>
+                    {<Category show={modeldis} url="ByModel" widthItem="10" widthContainer="122" />}
                     {<Category show={budgetdis} url="ByPrice" widthItem="15" widthContainer="100" />}
                     {<Category show={bodytypedis} url="ByBodyType" widthItem="14.019" widthContainer="104" />}
-                    <div className="arrow-rigth" onClick={leftshift}><FaAngleRight /></div>
+
                     <div className="arrow-left" onClick={rigthshift}><FaAngleLeft /></div>
                 </div>
+                <svg onClick={leftshift} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right arrow-rigth" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
             </div>
             <div className="row">hello</div>
             <div className="row">hello</div>

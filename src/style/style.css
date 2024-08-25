@@ -111,10 +111,14 @@ cursor: pointer;
     justify-content: space-around;
     position: relative;
     right: 0px;
+    column-gap: 0px;
     transition: right 2s;
 }
 .list-items{
-    border:1px solid black;
+    /* border:0.8px solid black; */
+    border: 0px;
+    background-color: #636363;
+    padding: 0px;
 }
 .arrow-rigth{
     width: 70px;
@@ -122,8 +126,9 @@ cursor: pointer;
     margin-top: -41px;
 }
 .arrow-left{
-    position: absolute;
-    top: 830px;
+    margin-left: -3.3vw;
+    width: 70px;
+    margin-top: -41px;
    
 }
 .arrow-left:hover{
@@ -134,10 +139,3 @@ cursor: pointer;
     color: darkblue;
     cursor: pointer;
 }
-/* @media only screen and (min-height: 800px) {
-    .arrow-rigth{
-        width: 70px;
-        margin-left: 87vw;
-        margin-top: -40px;
-    }
-  } */

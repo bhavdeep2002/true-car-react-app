@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Category from "../Category/Category"
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 export default function QuickSearch() {
 
     const [modeldis, setModelDis] = useState(true);
@@ -24,9 +23,10 @@ export default function QuickSearch() {
 
     }
     const leftshift = () => {
-        console.log("left shift")
+        let itemswidth=  document.getElementsByClassName('list-items')[0].getBoundingClientRect().width
         if (rightdistance < 540) {
-            rightdistance += 270
+            console.log(itemswidth)
+            rightdistance+=itemswidth
             document.getElementById('container-category').style.right = rightdistance + "px";
         }
         else {
@@ -35,7 +35,7 @@ export default function QuickSearch() {
         }
         console.log(rightdistance)
     }
-    const rigthshift = () => {
+    const rightshift = () => {
         if (rightdistance === 0) {
             rightdistance = 540;
             document.getElementById('container-category').style.right = rightdistance + "px";
@@ -61,12 +61,13 @@ export default function QuickSearch() {
             </div>
             <div className="row">
                 <div className='col-md-12' style={{ overflowX: "hidden", overflowY: 'hidden' }}>
-                    {<Category show={modeldis} url="ByModel" widthItem="10" widthContainer="122" />}
+                    {<Category show={modeldis} url="ByModel" widthItem="11" widthContainer="122" />}
                     {<Category show={budgetdis} url="ByPrice" widthItem="15" widthContainer="100" />}
                     {<Category show={bodytypedis} url="ByBodyType" widthItem="14.019" widthContainer="104" />}
-
-                    <div className="arrow-left" onClick={rigthshift}><FaAngleLeft /></div>
                 </div>
+                <svg onClick={rightshift} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
                 <svg onClick={leftshift} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right arrow-rigth" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                 </svg>

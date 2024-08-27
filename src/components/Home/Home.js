@@ -4,6 +4,7 @@ import Routingfilter from '../Routingfilter/Routingfilter'
 import Banner from '../Banner/Banner'
 import Selectbar from '../Selectbar/Selectbar'
 import QuickSearch from '../QuickSearch/QuickSearch'
+import DisplayCar from '../DisplayCar/DisplayCar'
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <Banner />
             <Selectbar />
             <QuickSearch />
+            <DisplayCar />
         </>
     )
 }

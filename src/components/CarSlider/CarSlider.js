@@ -2,12 +2,32 @@ import React from 'react'
 import CardCar from '../CarCard/CarCard'
 
 export default function CarSlider() {
-
+let width =window.innerWidth
+let rightdistance =0
     const rightshift=()=>{
-
+        let cardwidth= document.getElementsByClassName('mycard')[0].getBoundingClientRect().width
+       let margin=(width/100)*1.25
+       console.log(rightdistance)
+       if(rightdistance<=0){
+        rightdistance=(cardwidth+margin)*8
+         document.getElementsByClassName('carslider-container')[0].style.right=rightdistance+"px"
+       }
+       else{
+        rightdistance-=cardwidth+margin
+         document.getElementsByClassName('carslider-container')[0].style.right=rightdistance+"px"
+       }
     }
     const leftshifter=()=>{
-        document.getElementsByClassName('carslider-container')[0].style.right="100px"
+       let cardwidth= document.getElementsByClassName('mycard')[0].getBoundingClientRect().width
+       let margin=(width/100)*1.25
+       if(rightdistance<(cardwidth+margin)*8){
+        rightdistance+=cardwidth+margin
+        document.getElementsByClassName('carslider-container')[0].style.right=rightdistance+"px"
+       }
+       else{
+        rightdistance=0
+        document.getElementsByClassName('carslider-container')[0].style.right=rightdistance+"px"
+       }
     }
     return (
         <div style={{ backgroundColor: "#e9ecef", paddingTop: "3%" }} className='container-flex'>

@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner'
 import Selectbar from '../Selectbar/Selectbar'
 import QuickSearch from '../QuickSearch/QuickSearch'
 import DisplayCar from '../DisplayCar/DisplayCar'
+import CarSlider from '../CarSlider/CarSlider'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <Selectbar />
             <QuickSearch />
             <DisplayCar />
+            <CarSlider />
         </>
     )
 }

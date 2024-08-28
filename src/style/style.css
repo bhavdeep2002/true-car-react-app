@@ -137,13 +137,43 @@ cursor: pointer;
     color: darkblue;
     cursor: pointer;
 }
-.arrow-rigth:hover{
+.arrow-right:hover{
     color: darkblue;
     cursor: pointer;
 }
 .viewall{
     display: flex;
     justify-content: flex-end;
+}
+.recent-top-rated{
+    width: 100%;
+    border-style: none;
+    background-color: white;
+    border-radius: 8px;
+    height: 60px;
+}
+.recent-top-rated:hover{
+    background-color:#e9ecef;
+}
+.carslider-container{
+       width: 250vw;
+    display: flex;
+    position: relative;
+    right: 0px;
+    transition: right 2s;
+}
+.arrow-left-car-slider{
+    width: 70px;
+    position: relative;
+    bottom: 206.39px;
+    left: 5.7vw;
+}
+.arrow-right-car-slider{
+    width: 70px;
+    position: relative;
+    top: 206.39px;
+    right: 2.05vw;
+   
 }
 @media screen and (max-width: 1280px) {
     .arrow-right{

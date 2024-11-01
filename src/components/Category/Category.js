@@ -5,7 +5,7 @@ export default function Category({show,url,widthItem,widthContainer}) {
     const [list, setList] = useState([])
     console.log(widthContainer)
     useEffect(() => {
-        axios.get(`http://localhost:8080/${url}`)
+        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
             .then((res) => {
                 setList(res.data.list)
                

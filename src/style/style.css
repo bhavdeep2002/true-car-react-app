@@ -148,12 +148,7 @@ cursor: pointer;
 .recent-top-rated{
     width: 100%;
     border-style: none;
-    background-color: white;
-    border-radius: 8px;
     height: 60px;
-}
-.recent-top-rated:hover{
-    background-color:#e9ecef;
 }
 .carslider-container{
        width: 250vw;
@@ -165,18 +160,20 @@ cursor: pointer;
 .arrow-left-car-slider{
     width: 70px;
     position: relative;
-    bottom: 206.39px;
+    bottom: 190.4px;
     left: 5.7vw;
+    cursor: pointer;
 }
 .arrow-right-car-slider{
     width: 70px;
     position: relative;
-    top: 206.39px;
+    top: 190.4px;
     right: 2.05vw;
-   
+    cursor: pointer;
 }
 .mycard{
     margin-right: 1.25vw;
+    width: 100vw;
 }
 @media screen and (max-width: 1280px) {
     .arrow-right{

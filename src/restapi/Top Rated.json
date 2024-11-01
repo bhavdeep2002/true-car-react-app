@@ -1,0 +1,126 @@
+{
+    "list":[
+        {
+            "name":"Grand Vitara ZETA",
+            "image":"/images/Grand Vitra ZETA.jpeg",
+            "year":"2022",
+            "fuel":"Petrol",
+            "driven":"10 265 km",
+            "place":"New Delhi",
+            "price":"13 35 000"
+    
+        }, 
+        {
+            "name":"Fronx DELTA",
+            "image":"/images/Fronx DELTA.jpeg",
+            "year":"2023",
+            "fuel":"Petrol",
+            "driven":"1 666 km",
+            "place":"New Delhi",
+            "price":"8 80 000"
+    
+        }
+        ,
+        {
+            "name":"Baleno DELTA CNG",
+            "image":"/images/Baleno DELTA CNG.jpeg",
+            "year":"2022",
+            "fuel":"CNG",
+            "driven":"63 928 km",
+            "place":"Faridabad",
+            "price":"7 40 000"
+    
+        },
+    {
+        "name":"Ciaz ALPHA",
+        "image":"/images/Ciaz ALPHA.jpeg",
+        "year":"2018",
+        "fuel":"Petrol",
+        "driven":"32 220 km",
+        "place":"New Delhi",
+        "price":"7 75 000"
+
+    }
+,
+    {
+        "name":"Ertiga VXI",
+        "image":"/images/Ertiga VXI.jpeg",
+        "year":"2019",
+        "fuel":"Petrol",
+        "driven":"75 736 km",
+        "place":"New Delhi",
+        "price":"7 25 000"
+
+    },
+    
+    {
+        "name":"Baleno SIGMA",
+        "image":"/images/Baleno SIGMA.jpeg",
+        "year":"2021",
+        "fuel":"Petrol",
+        "driven":"49 846 km",
+        "place":"New Delhi",
+        "price":"5 85 000"  
+    },
+    {
+        "name":"Dzire LXI",
+        "image":"/images/Dzire LXI.jpeg",
+        "year":"2017",
+        "fuel":"Petrol",
+        "driven":"81 186 km",
+        "place":"New Delhi",
+        "price":"4 55 000"  
+    },
+    {
+        "name":"Swift VXI",
+        "image":"/images/Swift VXI.jpeg",
+        "year":"2018",
+        "fuel":"Petrol",
+        "driven":"64 297 km",
+        "place":"New Delhi",
+        "price":"5 00 000"
+
+    },
+   
+    {
+        "name":"Eeco CNG 5-STR",
+        "image":"/images/Eeco CNG 5-STR.jpeg",
+        "year":"2022",
+        "fuel":"CNG",
+        "driven":"37 001 km",
+        "place":"Faridabad",
+        "price":"5 75 000"
+
+    },
+    {
+        "name":"Alto 800 CNG LXI",
+        "image":"/images/Alto 800 CNG LXI.jpeg",
+        "year":"2019",
+        "fuel":"CNG",
+        "driven":"89 030 km",
+        "place":"Faridabad",
+        "price":"3 29 000"
+
+    },
+    {
+        "name":"Wagan R LXI CNG",
+        "image":"/images/Wagan R LXI CNG-2019.jpeg",
+        "year":"2019",
+        "fuel":"CNG",
+        "driven":"38 460 km",
+        "place":"New Delhi",
+        "price":"4 85 000"
+
+    },
+    {
+        "name":"Swift VXI",
+        "image":"/images/Swift VXI-2019.jpeg",
+        "year":"2019",
+        "fuel":"Petrol",
+        "driven":"48 838 km",
+        "place":"New Delhi",
+        "price":"5 25 000"
+
+    }
+]
+}

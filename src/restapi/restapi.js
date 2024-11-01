@@ -1,6 +1,8 @@
 const server =require('http')
 const fs =require('fs')
 
+const port =process.env.PORT || 8080
+
 const readfile=(res,path)=>{
   fs.readFile(path,'utf8',(err,data)=>{
     if(err){
@@ -44,10 +46,22 @@ else if(method==='GET' && url==='/Banner'){
   const path ='./Bannerimages.json'
   readfile(res,path)
 }
+else if(method==='GET' && url==='/RecentlyAdded'){
+  const path ='./Recently Added.json'
+  readfile(res,path)
+}
+else if(method==='GET' && url==='/TopRated'){
+  const path ='./Top Rated.json'
+  readfile(res,path)
+}
+else if(method==='GET' && url==='/Viewall'){
+  const path ='./View all.json'
+  readfile(res,path)
+}
 else{
   res.end("page not Found")
 }
-}).listen(8080,()=>{
-  console.log("Server has been started on http://localhost:8080")
+}).listen(port,()=>{
+  console.log(`Server has been started on http://localhost:${port}`)
 })
 

@@ -16,7 +16,6 @@ export default function Home() {
             <Selectbar />
             <QuickSearch />
             <DisplayCar />
-            <CarSlider />
         </>
     )
 }

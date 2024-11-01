@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CardCar from '../CarCard/CarCard'
+import axios from 'axios'
 
-export default function CarSlider() {
+export default function CarSlider({url}) {
+    const [cars,setCars] =useState([])
+    const [arrow,setArrow] =useState(0);
+   
+    useEffect(()=>{
+        axios.get(`http://localhost:8080/${url}`)
+        .then((res)=>{
+            setCars(res.data.list)
+        })
+        .catch((e)=>{
+            console.log(e)
+        })
+    },[url])
 let width =window.innerWidth
 let rightdistance =0
     const rightshift=()=>{
@@ -35,18 +48,7 @@ let rightdistance =0
                 <div className='col-md-1'></div>
                 <div style={{ overflowX: "hidden" }} className='col-md-10'>
                     <div className='carslider-container'>
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
-                        <CardCar />
+                    {cars.map((i,index)=>{return<CardCar key={index} img={i.image} name={i.name} place={i.place} year={i.year} fuel={i.fuel} totaldriven={i.driven} price={i.price}/>})}
                     </div>
                 </div>
                 <svg onClick={leftshifter} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right arrow-right-car-slider" viewBox="0 0 16 16">

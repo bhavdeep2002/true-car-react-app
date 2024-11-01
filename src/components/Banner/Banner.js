@@ -5,7 +5,7 @@ export default function Banner() {
     const [images, setImages] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:8080/Banner')
+        axios.get('https://true-car-backend-lhjh.onrender.com/Banner')
             .then((res) => {
                 setImages(res.data.images)
             })

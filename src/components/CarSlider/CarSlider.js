@@ -7,7 +7,7 @@ export default function CarSlider({url}) {
     const [arrow,setArrow] =useState(0);
    
     useEffect(()=>{
-        axios.get(`http://localhost:8080/${url}`)
+        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
         .then((res)=>{
             setCars(res.data.list)
         })

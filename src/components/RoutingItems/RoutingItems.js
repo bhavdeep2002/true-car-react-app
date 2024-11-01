@@ -5,7 +5,7 @@ export default function RoutingItems({ menu, models }) {
     const [items, setItem] = useState([])
     useEffect(() => {
         const url = menu.split(' ').join('')
-        axios.get(`http://localhost:8080/${url}`)
+        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
             .then((res) => {
                 setItem(res.data.list)
             })

@@ -6,7 +6,7 @@ export default function Routingfilter() {
  const [menu,setMenu] =useState([])
 
   useEffect(()=>{
-    axios.get('http://localhost:8080/menu')
+    axios.get('https://true-car-backend-lhjh.onrender.com/menu')
     .then((res)=>{
       
       setMenu(res.data.menu)

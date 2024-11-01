@@ -17,7 +17,7 @@ const readfile=(res,path)=>{
 server.createServer((req,res)=>{
   const {method,url} =req
 
-res.writeHead(200,{'Content-Type':'application/json',"access-control-allow-origin":'http://localhost:3000'})
+res.writeHead(200,{'Content-Type':'application/json',"access-control-allow-origin":'*'})
 
 if(method==='GET' && url==='/ByModel'){
   const path ='./model.json'

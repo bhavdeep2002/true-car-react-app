@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Restapi from '../Restapi/Restapi'
 
 export default function RoutingItems({ menu, models }) {
     const [items, setItem] = useState([])
+    const {restapi} =useContext(Restapi)
+    console.log(restapi)
     useEffect(() => {
         const url = menu.split(' ').join('')
-        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
+        axios.get(`${restapi}/${url}`)
             .then((res) => {
                 setItem(res.data.list)
             })

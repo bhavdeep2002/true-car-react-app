@@ -1,14 +1,14 @@
 import axios from "axios"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
+import Restapi from '../Restapi/Restapi'
 
 export default function Category({show,url,widthItem,widthContainer}) {
     const [list, setList] = useState([])
-    console.log(widthContainer)
+    const {restapi} =useContext(Restapi)
     useEffect(() => {
-        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
+        axios.get(`${restapi}/${url}`)
             .then((res) => {
                 setList(res.data.list)
-               
             })
             .catch((e) => {
                 console.log(e)

@@ -5,17 +5,18 @@ import Banner from '../Banner/Banner'
 import Selectbar from '../Selectbar/Selectbar'
 import QuickSearch from '../QuickSearch/QuickSearch'
 import DisplayCar from '../DisplayCar/DisplayCar'
-import CarSlider from '../CarSlider/CarSlider'
+import Restapi from '../Restapi/Restapi'
 
 export default function Home() {
+
     return (
-        <>
+        <Restapi.Provider value={{restapi:process.env.REACT_APP_API_URL}}>     
             <Navbar />
             <Routingfilter />
             <Banner />
             <Selectbar />
             <QuickSearch />
-            <DisplayCar />
-        </>
+            <DisplayCar />  
+        </Restapi.Provider>
     )
 }

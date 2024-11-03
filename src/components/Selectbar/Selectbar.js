@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import InputSelect from "../InputSelect/InputSelect"
 
 export default function Selectbar() {
@@ -11,7 +11,6 @@ export default function Selectbar() {
                         {input.map((i, index) => {
                            return <InputSelect selected={i} key={index} />
                         })}
-
                         <div className="btn-container">
                             <input type="button" value={"SEARCH"} className="btn select-search" />
                         </div>

@@ -1,11 +1,13 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import Restapi from '../Restapi/Restapi'
 
 export default function Banner() {
     const [images, setImages] = useState([])
-
+    const {restapi} =useContext(Restapi)
+    console.log(Restapi)
     useEffect(() => {
-        axios.get('https://true-car-backend-lhjh.onrender.com/Banner')
+        axios.get(`${restapi}/Banner`)
             .then((res) => {
                 setImages(res.data.images)
             })

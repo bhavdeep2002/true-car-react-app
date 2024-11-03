@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import CardCar from '../CarCard/CarCard'
 import axios from 'axios'
+import Restapi from '../Restapi/Restapi'
 
 export default function CarSlider({url}) {
     const [cars,setCars] =useState([])
     const [arrow,setArrow] =useState(0);
-   
+    const {restapi} =useContext(Restapi)
+
     useEffect(()=>{
-        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
+        axios.get(`${restapi}/${url}`)
         .then((res)=>{
             setCars(res.data.list)
         })
@@ -48,7 +50,7 @@ let rightdistance =0
                 <div className='col-md-1'></div>
                 <div style={{ overflowX: "hidden" }} className='col-md-10'>
                     <div className='carslider-container'>
-                    {cars.map((i,index)=>{return<CardCar key={index} img={i.image} name={i.name} place={i.place} year={i.year} fuel={i.fuel} totaldriven={i.driven} price={i.price}/>})}
+                    {cars.map((i,index)=>{return <CardCar key={index} img={i.image} name={i.name} place={i.place} year={i.year} fuel={i.fuel} totaldriven={i.driven} price={i.price}/> })}
                     </div>
                 </div>
                 <svg onClick={leftshifter} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right arrow-right-car-slider" viewBox="0 0 16 16">

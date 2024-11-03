@@ -1,8 +1,10 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import Restapi from '../Restapi/Restapi'
 
 export default function InputSelect({selected}) {
     const [list,setList]=useState([])
+    const {restapi} =useContext(Restapi)
     useEffect(()=>{
         let url
         if(selected==="Select Model"){
@@ -14,7 +16,7 @@ export default function InputSelect({selected}) {
         else {
              url="ByCity"
         }
-        axios.get(`https://true-car-backend-lhjh.onrender.com/${url}`)
+        axios.get(`${restapi}/${url}`)
         .then((res)=>{
             setList(res.data.list)
         })

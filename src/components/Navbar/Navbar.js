@@ -8,9 +8,7 @@ export default function Navbar (){
         <>
         <div className='container-flex'>
             <div className='row'>
-                <div className='col-md-6'>
-    
-                </div>
+                <div className='col-md-6'></div>
                 <div className='col-md-1 navfont'>
                 Search City
                 </div>

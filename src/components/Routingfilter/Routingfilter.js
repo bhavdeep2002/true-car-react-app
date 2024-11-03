@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import RoutingItems from '../RoutingItems/RoutingItems';
 import axios from 'axios';
+import Restapi from '../Restapi/Restapi'
 
 export default function Routingfilter() {
  const [menu,setMenu] =useState([])
-
+ const {restapi} =useContext(Restapi)
   useEffect(()=>{
-    axios.get('https://true-car-backend-lhjh.onrender.com/menu')
-    .then((res)=>{
-      
+    axios.get(`${restapi}/menu`)
+    .then((res)=>{  
       setMenu(res.data.menu)
     })
     .catch((error)=>console.log(error))

@@ -6,12 +6,12 @@ import Selectbar from '../Selectbar/Selectbar'
 import QuickSearch from '../QuickSearch/QuickSearch'
 import DisplayCar from '../DisplayCar/DisplayCar'
 import Restapi from '../Restapi/Restapi'
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 
 export default function Home() {
-
+    const apiUrl = process.env.REACT_APP_API_URL; // Access the environment variable directly
+    console.log(apiUrl)
     return (
-        <Restapi.Provider value={{restapi:process.env.REACT_APP_API_URL}}>     
+        <Restapi.Provider value={{ restapi: apiUrl }}>     
             <Navbar />
             <Routingfilter />
             <Banner />

@@ -1,6 +1,6 @@
 {
     "list":[
-        {
+        {   "id":1,
             "name":"Swift VXI AMT",
             "image":"/images/Swift VXI AMT.jpeg",
             "year":"2018",
@@ -10,7 +10,7 @@
             "price":"4 95 000"
 
         },
-        {
+        {   "id":2,
             "name":"Swift LXI",
             "image":"/images/Swift LXI.jpeg",
             "year":"2017",
@@ -19,7 +19,7 @@
             "place":"New Delhi",
             "price":"3 95 000"
         },
-        {
+        {   "id":3,
             "name":"Wagon R LXI CNG",
             "image":"/images/Wagan R LXI CNG.jpeg",
             "year":"2020",
@@ -28,7 +28,7 @@
             "place":"New Delhi",
             "price":"4 85 000"  
         }
-        ,{
+        ,{  "id":4,
             "name":"Wagon R LXI CNG",
             "image":"/images/Wagan R LXI CNG-465000.jpeg",
             "year":"2020",
@@ -37,7 +37,7 @@
             "place":"New Delhi",
             "price":"4 65 000"  
         },
-        {
+        {   "id":5,
             "name":"Baleno SIGMA",
             "image":"/images/Baleno SIGMA.jpeg",
             "year":"2021",
@@ -46,7 +46,7 @@
             "place":"New Delhi",
             "price":"5 85 000"  
         }
-        ,{
+        ,{  "id":6,
             "name":"Baleno SIGMA",
             "image":"/images/Baleno SIGMA-2017-petrol.jpeg",
             "year":"2017",
@@ -55,7 +55,7 @@
             "place":"New Delhi",
             "price":"4 25 000"  
         }
-        ,{
+        ,{  "id":7,
             "name":"Vitra Brezza VXI",
             "image":"/images/Vitra Brezza VXI-2020.jpeg",
             "year":"2020",
@@ -64,7 +64,7 @@
             "place":"Gurugram",
             "price":"7 90 000"  
         }
-        ,{
+        ,{  "id":8,
             "name":"New Brezza VXI CNG",
             "image":"/images/Brezza VXI CNG.jpeg",
             "year":"2023",
@@ -73,7 +73,7 @@
             "place":"New Delhi",
             "price":"11 00 000"  
         }
-        ,{
+        ,{  "id":9,
             "name":"Dzire LXI",
             "image":"/images/Dzire LXI.jpeg",
             "year":"2017",
@@ -82,7 +82,7 @@
             "place":"New Delhi",
             "price":"4 55 000"  
         }
-        ,{
+        ,{  "id":10,
             "name":"Swift Dzire VXI",
             "image":"/images/Swift Dzire VXI.jpeg",
             "year":"2016",
@@ -91,7 +91,7 @@
             "place":"Gurugram",
             "price":"2 94 000"  
         }
-        ,{
+        ,{  "id":11,
             "name":"Ertiga VXI",
             "image":"/images/Ertiga VXI.jpeg",
             "year":"2019",
@@ -100,7 +100,7 @@
             "place":"New Delhi",
             "price":"7 25 000"  
         },
-        {
+        {   "id":12,
             "name":"Ertiga ZXI",
             "image":"/images/Ertiga ZXI.jpeg",
             "year":"2018",

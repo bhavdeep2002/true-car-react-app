@@ -5,7 +5,7 @@ import Restapi from '../Restapi/Restapi'
 export default function InputSelect({selected}) {
     const [list,setList]=useState([])
     const {restapi} =useContext(Restapi)
-    console.log(restapi)
+    console.log(list)
     useEffect(()=>{
         let url
         if(selected==="Select Model"){

@@ -17,6 +17,7 @@ export default function InputSelect({selected}) {
         else {
              url="ByCity"
         }
+        console.log(`${restapi}/${url}`)
         axios.get(`${restapi}/${url}`)
         .then((res)=>{
             setList(res.data.list)

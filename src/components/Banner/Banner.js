@@ -5,7 +5,7 @@ import Restapi from '../Restapi/Restapi'
 export default function Banner() {
     const [images, setImages] = useState([])
     const {restapi} =useContext(Restapi)
-    console.log(Restapi)
+    console.log(restapi)
     useEffect(() => {
         axios.get(`${restapi}/Banner`)
             .then((res) => {

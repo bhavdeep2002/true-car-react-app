@@ -5,8 +5,9 @@ import Restapi from '../Restapi/Restapi'
 export default function Banner() {
     const [images, setImages] = useState([])
     const {restapi} =useContext(Restapi)
-    console.log(restapi)
+    
     useEffect(() => {
+        console.log(`${restapi}/Banner`)
         axios.get(`${restapi}/Banner`)
             .then((res) => {
                 setImages(res.data.images)
@@ -16,6 +17,7 @@ export default function Banner() {
             })
     }, [])
     return (
+        
         <div className="container-flex">
             <div className="row">
                 <div className="col-md-12" style={{ padding: "0px", margin: "0px" }}>

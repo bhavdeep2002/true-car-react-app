@@ -10,6 +10,7 @@ export default function Banner() {
         console.log(`${restapi}/Banner`)
         axios.get(`${restapi}/Banner`)
             .then((res) => {
+                console.log(res.data.images)
                 setImages(res.data.images)
             })
             .catch((e) => {

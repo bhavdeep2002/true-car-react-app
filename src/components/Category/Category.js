@@ -31,7 +31,7 @@ export default function Category({show,url,widthItem,widthContainer}) {
                    else{
                     return( 
                         <div style={{width:widthItem+"%",height:"80px"}}  key={index} className='list-items'>
-                            <img style={{width:"52%",marginTop:"5px"}} src={`/images/${i}.png`} />{i}              
+                            <img style={{width:"52%",marginTop:"5px"}} src={`/images/${i}.WEBP`} />{i}              
                         </div>
                         )
                    }

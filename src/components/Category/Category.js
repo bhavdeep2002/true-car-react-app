@@ -6,6 +6,7 @@ export default function Category({show,url,widthItem,widthContainer}) {
     const [list, setList] = useState([])
     const {restapi} =useContext(Restapi)
     useEffect(() => {
+       
         axios.get(`${restapi}/${url}`)
             .then((res) => {
                 setList(res.data.list)
@@ -16,6 +17,7 @@ export default function Category({show,url,widthItem,widthContainer}) {
 
     }, [])
     if(show){
+        console.log(list)
         return (       
             <div id="container-category" style={{width:widthContainer+"vw"}} className='container-category'>
                 {list.map((i, index) => {

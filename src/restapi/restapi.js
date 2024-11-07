@@ -48,16 +48,38 @@ else if(method==='GET' && url==='/Banner'){
   readfile(res,path)
 }
 else if(method==='GET' && url==='/RecentlyAdded'){
-  const path ='./Recently Added.json'
+  const path ='./RecentlyAdded.json'
   readfile(res,path)
 }
 else if(method==='GET' && url==='/TopRated'){
-  const path ='./Top Rated.json'
+  const path ='./TopRated.json'
   readfile(res,path)
 }
 else if(method==='GET' && url==='/Viewall'){
   const path ='./View all.json'
   readfile(res,path)
+}
+else if(method==='GET'){
+ const urlarray =url.split('/')
+  const file =urlarray[1]
+  const itemtofind = parseInt(urlarray[2])
+  let itemtosend
+  let object
+
+  fs.readFile(`${file}.json`,'utf8' ,(e,d)=>{
+    if(e){
+      console.log(e)
+    }
+    else{
+    object =JSON.parse(d)//  object is now object containing list array
+    }
+    object.list.forEach((i)=>{
+      if(i.id==itemtofind){
+        itemtosend= JSON.stringify(i)
+        res.end(itemtosend)
+      }
+    })
+  })
 }
 else{
   res.end("page not Found")

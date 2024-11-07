@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import CarSlider from "../CarSlider/CarSlider"
 
 export default function DisplayCar(){
@@ -6,6 +6,7 @@ export default function DisplayCar(){
 const [CarstoDisplay,setCarstoDisplay]=useState('RecentlyAdded')
 const [btnRecent,setRecent]=useState('#e9ecef')
 const [btnTopRated,setTopRated]=useState('white')
+
 
 let seturl=(e)=>{
 switch(e.target.innerHTML){

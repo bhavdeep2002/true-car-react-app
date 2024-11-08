@@ -59,6 +59,10 @@ else if(method==='GET' && url==='/Viewall'){
   const path ='./View all.json'
   readfile(res,path)
 }
+else if(method==='GET' && url==='/icons'){
+  const path ='./icons.json'
+  readfile(res,path)
+}
 else if(method==='GET'){
  const urlarray =url.split('/')
   const file =urlarray[1]

@@ -1,3 +1,3 @@
 {
-    "icons":["/images/calender.svg","/images/fuel.svg","/images/meter.svg","/images/manual.svg","/images/first-owner.svg"]
+    "icons":[{"img": "/images/calender.svg","detail":"year"},{"img":"/images/fuel.svg","detail":"fuel"},{"img":"/images/meter.svg","detail":"driven"},{"img": "/images/manual.svg","detail":"transmission"},{"img":"/images/first-owner.svg","detail":"owner"}]
 }

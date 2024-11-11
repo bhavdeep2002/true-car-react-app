@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import Restapi from "../Restapi/Restapi"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
+import CarDetailSlider from "../CarDetailSlider/CarDetailSlider"
 
 export default function CarDetail() {
     const { id } = useParams()
@@ -34,11 +35,38 @@ export default function CarDetail() {
             })
     }, [])
 
-    return (
+    return (<>
         <div className="container">
             <div className="row">Home | Buy Car | {item.name}</div>
             <div className="row">
-                <div className="col-md-6"><img style={{ width: "100%" }} src={item.image} /></div>
+                <div className="col-md-6">
+                    <div style={{overflowX:"hidden"}} className="container-flex">
+                        <div className="row">
+                            <div id="carouselExample" className="carousel slide">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src={item.image && item.image[0]} className="d-block w-100 cardetail_img" alt="" />
+                                    </div>
+                                    {item.image && item.image.map((i, index) => {
+                                        if (index == 0) return null
+                                        return <div key={index} className="carousel-item">
+                                            <img src={i} className="d-block w-100 cardetail_img" alt="" />
+                                        </div>
+                                    })}
+                                </div>
+                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <CarDetailSlider />
+                    </div>
+                </div>
                 <div className="col-md-6">
                     <div className="container-flex">
                         <div className="row">
@@ -55,12 +83,12 @@ export default function CarDetail() {
                         </div>
                         <div className="row">
                             <div style={{ display: "flex", marginTop: "40px" }} className="col-md-12">
-                                {icons.map((i, index) => { return <div className="icons"><img src={i} />{item.driven}</div> })}
+                                {icons.map((i, index) => { return <div key={index} className="icons"><img src={i.img} />{item[i.detail]}</div> })}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    </>)
 }

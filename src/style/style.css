@@ -112,6 +112,7 @@ cursor: pointer;
     right: 0px;
     column-gap: 0px;
     transition: right 2s;
+    flex-wrap: wrap;
 }
 .list-items{
     /* border:0.8px solid black; */
@@ -190,6 +191,22 @@ text-decoration: none;
 }
 .icons img{
 width: 40px;
+height: 40px;
+}
+.cardetail_img{
+    height: 50vh;
+}
+.sliderdetail{
+width: 100%;
+}
+.slider{
+display: flex;
+position: relative;
+right: 8px;
+}
+.slider-elements{
+margin-left: 20px;
+margin-top: 20px;
 }
 @media screen and (max-width: 1280px) {
     .arrow-right{

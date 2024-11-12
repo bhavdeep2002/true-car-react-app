@@ -202,11 +202,22 @@ width: 100%;
 .slider{
 display: flex;
 position: relative;
-right: 8px;
+right: 0px;
+transition: right 2s;
 }
 .slider-elements{
 margin-left: 20px;
 margin-top: 20px;
+}
+.btn_noborder{
+    border-style:none;
+    padding: 0px;
+}
+.arrow_carDetail{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
 }
 @media screen and (max-width: 1280px) {
     .arrow-right{

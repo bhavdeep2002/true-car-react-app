@@ -2,12 +2,12 @@
     "list":[
         {   "id":1,
             "name":"Swift VXI AMT",
-            "image":"/images/Swift VXI AMT.jpeg",
-            "year":"2018",
+            "image":["/images/Swift VXI AMT.webp","/images/Swift VXI AMT_2.webp","/images/Swift VXI AMT_3.webp","/images/Swift VXI AMT_4.webp","/images/Swift VXI AMT_5.webp","/images/Swift VXI AMT_6.webp"],
+            "year":"2020",
             "fuel":"Petrol",
-            "driven":"68 383 km",
+            "driven":"70 655 km",
             "place":"New Delhi",
-            "price":"4 95 000",
+            "price":"6 90 000",
             "owner":"1st Owner",
             "transmission":"Automatic"
         },

@@ -40,9 +40,9 @@ export default function CarDetail() {
             <div className="row">Home | Buy Car | {item.name}</div>
             <div className="row">
                 <div className="col-md-6">
-                    <div style={{overflowX:"hidden"}} className="container-flex">
+                    <div style={{ overflowX: "hidden" ,overflowY:"hidden"}} className="container-flex">
                         <div className="row">
-                            <div id="carouselExample" className="carousel slide">
+                            <div id="carouselExampleIndicators" className="carousel slide">
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
                                         <img src={item.image && item.image[0]} className="d-block w-100 cardetail_img" alt="" />
@@ -54,17 +54,17 @@ export default function CarDetail() {
                                         </div>
                                     })}
                                 </div>
-                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Previous</span>
                                 </button>
-                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Next</span>
                                 </button>
                             </div>
                         </div>
-                        <CarDetailSlider />
+                        <CarDetailSlider img={item} />
                     </div>
                 </div>
                 <div className="col-md-6">

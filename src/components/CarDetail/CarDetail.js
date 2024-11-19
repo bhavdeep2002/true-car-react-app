@@ -64,7 +64,7 @@ export default function CarDetail() {
                                 </button>
                             </div>
                         </div>
-                        <CarDetailSlider img={item} />
+                        <CarDetailSlider img={item.image} />
                     </div>
                 </div>
                 <div className="col-md-6">
